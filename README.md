@@ -32,6 +32,19 @@ Ez különösen hasznos akkor, ha a felhasználó nem tudja egy alkalommal befej
 A program képes eltárolni a győzelmek számát, így nyomon követhető, hogy egy adott játékos hányszor nyert.
 
 ---
+## GUI kinézet
+
+## Állapottér példák
+
+Az alábbi képek a játék egyes állapotait mutatják be:
+
+![State 1](MESTINT%20v2.0/Images/state1.png)
+![State 2](MESTINT%20v2.0/Images/state2.png)
+![State 3](MESTINT%20v2.0/Images/state3.png)
+![State 4](MESTINT%20v2.0/Images/state4.png)
+![State 5](MESTINT%20v2.0/Images/state5.png)
+
+---
 
 ## A játék működése
 
@@ -55,19 +68,7 @@ A játék addig tart, amíg:
 
 ---
 
-## GUI kinézet
 
-## Állapottér példák
-
-Az alábbi képek a játék egyes állapotait mutatják be:
-
-![State 1](MESTINT%20v2.0/Images/state1.png)
-![State 2](MESTINT%20v2.0/Images/state2.png)
-![State 3](MESTINT%20v2.0/Images/state3.png)
-![State 4](MESTINT%20v2.0/Images/state4.png)
-![State 5](MESTINT%20v2.0/Images/state5.png)
-
----
 
 ## Összegzés
 
