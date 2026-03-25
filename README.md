@@ -57,9 +57,15 @@ A játék addig tart, amíg:
 
 ## GUI kinézet
 
-Az alábbi kép a játék grafikus felületének egy mintanézetét mutatja:
+## Állapottér példák
 
-![A Connect 4 játék GUI felülete](connect4_gui_mockup.png)
+Az alábbi képek a játék egyes állapotait mutatják be:
+
+![State 1](images/state1.png)
+![State 2](images/state2.png)
+![State 3](images/state3.png)
+![State 4](images/state4.png)
+![State 5](images/state5.png)
 
 ---
 
