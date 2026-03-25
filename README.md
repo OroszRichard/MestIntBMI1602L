@@ -61,11 +61,11 @@ A játék addig tart, amíg:
 
 Az alábbi képek a játék egyes állapotait mutatják be:
 
-![State 1](images/state1.png)
-![State 2](images/state2.png)
-![State 3](images/state3.png)
-![State 4](images/state4.png)
-![State 5](images/state5.png)
+![State 1](MESTINT-V2.0/Images/state1.png)
+![State 2](MESTINT-V2.0/Images/state2.png)
+![State 3](MESTINT-V2.0/Images/state3.png)
+![State 4](MESTINT-V2.0/Images/state4.png)
+![State 5](MESTINT-V2.0/Images/state5.png)
 
 ---
 
