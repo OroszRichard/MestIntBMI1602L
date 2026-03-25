@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BoardEvaluator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Connect4 AI Project</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">BoardEvaluator.java</span></div><h1>BoardEvaluator.java</h1><pre class="source lang-java linenums">/**
+ * A Connect4 tábla heurisztikus értékelését végző, tokozott osztály.
+ */
+<span class="fc" id="L4">public class BoardEvaluator {</span>
+
+    /**
+     * Értékeli a tábla jelenlegi állapotát az AI szemszögéből.
+     * 
+     * @param board A vizsgálandó tábla objektum.
+     * @param aiPlayer Az AI azonosítója.
+     * @param humanPlayer Az emberi játékos azonosítója.
+     * @return A tábla heurisztikus pontszáma.
+     */
+    public int evaluate(Connect4Board board, char aiPlayer, char humanPlayer) {
+<span class="fc" id="L15">        int score = 0;</span>
+<span class="fc" id="L16">        int rows = board.getRows();</span>
+<span class="fc" id="L17">        int cols = board.getCols();</span>
+
+        // A középső oszlop preferálása
+<span class="fc" id="L20">        int centerCol = cols / 2;</span>
+<span class="fc" id="L21">        int centerCount = 0;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int r = 0; r &lt; rows; r++) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            if (board.getCell(r, centerCol) == aiPlayer) {</span>
+<span class="fc" id="L24">                centerCount++;</span>
+            }
+        }
+<span class="fc" id="L27">        score += centerCount * 3;</span>
+
+        // Vízszintes ablakok vizsgálata
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (int r = 0; r &lt; rows; r++) {</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">            for (int c = 0; c &lt; cols - 3; c++) {</span>
+<span class="fc" id="L32">                char[] window = {board.getCell(r, c), board.getCell(r, c+1), board.getCell(r, c+2), board.getCell(r, c+3)};</span>
+<span class="fc" id="L33">                score += evaluateWindow(window, aiPlayer, humanPlayer, board.getEmptySlot());</span>
+            }
+        }
+
+        // Függőleges ablakok vizsgálata
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        for (int c = 0; c &lt; cols; c++) {</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">            for (int r = 0; r &lt; rows - 3; r++) {</span>
+<span class="fc" id="L40">                char[] window = {board.getCell(r, c), board.getCell(r+1, c), board.getCell(r+2, c), board.getCell(r+3, c)};</span>
+<span class="fc" id="L41">                score += evaluateWindow(window, aiPlayer, humanPlayer, board.getEmptySlot());</span>
+            }
+        }
+
+        // Pozitív átlók vizsgálata
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        for (int r = 0; r &lt; rows - 3; r++) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            for (int c = 0; c &lt; cols - 3; c++) {</span>
+<span class="fc" id="L48">                char[] window = {board.getCell(r, c), board.getCell(r+1, c+1), board.getCell(r+2, c+2), board.getCell(r+3, c+3)};</span>
+<span class="fc" id="L49">                score += evaluateWindow(window, aiPlayer, humanPlayer, board.getEmptySlot());</span>
+            }
+        }
+
+        // Negatív átlók vizsgálata
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        for (int r = 0; r &lt; rows - 3; r++) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            for (int c = 0; c &lt; cols - 3; c++) {</span>
+<span class="fc" id="L56">                char[] window = {board.getCell(r+3, c), board.getCell(r+2, c+1), board.getCell(r+1, c+2), board.getCell(r, c+3)};</span>
+<span class="fc" id="L57">                score += evaluateWindow(window, aiPlayer, humanPlayer, board.getEmptySlot());</span>
+            }
+        }
+
+<span class="fc" id="L61">        return score;</span>
+    }
+
+    /**
+     * Belső segédmetódus egy &quot;ablak&quot; (4 hosszú sorozat) kiértékeléséhez.
+     */
+    private int evaluateWindow(char[] window, char aiPiece, char humanPiece, char emptySlot) {
+<span class="fc" id="L68">        int score = 0;</span>
+<span class="fc" id="L69">        int pieceCount = 0;</span>
+<span class="fc" id="L70">        int emptyCount = 0;</span>
+<span class="fc" id="L71">        int oppCount = 0;</span>
+
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        for (char cell : window) {</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">            if (cell == aiPiece) pieceCount++;</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">            else if (cell == emptySlot) emptyCount++;</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">            else if (cell == humanPiece) oppCount++;</span>
+        }
+
+        // Saját győzelmi esélyek pontozása
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        if (pieceCount == 4) {</span>
+<span class="fc" id="L81">            score += 100; // Győzelem</span>
+<span class="fc bfc" id="L82" title="All 4 branches covered.">        } else if (pieceCount == 3 &amp;&amp; emptyCount == 1) {</span>
+<span class="fc" id="L83">            score += 5; // Majdnem kész</span>
+<span class="fc bfc" id="L84" title="All 4 branches covered.">        } else if (pieceCount == 2 &amp;&amp; emptyCount == 2) {</span>
+<span class="fc" id="L85">            score += 2; // Épülőfélben</span>
+        }
+
+        // Az ellenfél veszélyességének blokkolása
+<span class="fc bfc" id="L89" title="All 4 branches covered.">        if (oppCount == 3 &amp;&amp; emptyCount == 1) {</span>
+<span class="fc" id="L90">            score -= 4; // Nagy mínusz, ha nem akadályozzuk meg a nyerését</span>
+        }
+
+<span class="fc" id="L93">        return score;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

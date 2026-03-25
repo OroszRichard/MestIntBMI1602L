@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Connect4Board.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Connect4 AI Project</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Connect4Board.java</span></div><h1>Connect4Board.java</h1><pre class="source lang-java linenums">import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * A Connect4 táblát és annak állapotát kezelő, tokozott osztály.
+ * Felelős a lépések validálásáért, végrehajtásáért, visszavonásáért, illetve a győzelem ellenőrzéséért.
+ */
+public class Connect4Board {
+    private final char[][] grid;
+    private final int rows;
+    private final int cols;
+<span class="fc" id="L12">    private final char emptySlot = ' ';</span>
+
+    /**
+     * Konstruktor, ami a nyers 2D tömb alapján inicializálja az objektumot.
+     * Készít egy belső másolatot munka közben, hogy ne írja felül a külső, eredeti táblát.
+     */
+<span class="fc" id="L18">    public Connect4Board(char[][] initialState) {</span>
+<span class="fc" id="L19">        this.rows = initialState.length;</span>
+<span class="fc" id="L20">        this.cols = initialState[0].length;</span>
+<span class="fc" id="L21">        this.grid = new char[rows][cols];</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int r = 0; r &lt; rows; r++) {</span>
+<span class="fc" id="L23">            System.arraycopy(initialState[r], 0, this.grid[r], 0, cols);</span>
+        }
+<span class="fc" id="L25">    }</span>
+
+    public int getRows() {
+<span class="fc" id="L28">        return rows;</span>
+    }
+
+    public int getCols() {
+<span class="fc" id="L32">        return cols;</span>
+    }
+
+    public char getCell(int r, int c) {
+<span class="fc" id="L36">        return grid[r][c];</span>
+    }
+    
+    public char getEmptySlot() {
+<span class="fc" id="L40">        return emptySlot;</span>
+    }
+
+    /**
+     * Visszaadja azon oszlopok listáját, ahová még lehet érvényes lépést tenni.
+     */
+    public List&lt;Integer&gt; getValidLocations() {
+<span class="fc" id="L47">        List&lt;Integer&gt; validLocations = new ArrayList&lt;&gt;();</span>
+        // Feltételezve, hogy a legfelső sor a 0. indexű
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        for (int c = 0; c &lt; cols; c++) {</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            if (grid[0][c] == emptySlot) {</span>
+<span class="fc" id="L51">                validLocations.add(c);</span>
+            }
+        }
+<span class="fc" id="L54">        return validLocations;</span>
+    }
+
+    /**
+     * Megkeresi, hogy egy adott oszlopban hová esne a következő bedobott korong (alulról felfelé haladva).
+     */
+    public int getNextOpenRow(int col) {
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        for (int r = rows - 1; r &gt;= 0; r--) {</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">            if (grid[r][col] == emptySlot) {</span>
+<span class="fc" id="L63">                return r;</span>
+            }
+        }
+<span class="fc" id="L66">        return -1;</span>
+    }
+
+    /**
+     * Letesz egy korongot egy adott koordinátára.
+     */
+    public void dropPiece(int row, int col, char piece) {
+<span class="fc" id="L73">        grid[row][col] = piece;</span>
+<span class="fc" id="L74">    }</span>
+
+    /**
+     * Visszavon egy lépést az adott koordinátáról.
+     */
+    public void undoMove(int row, int col) {
+<span class="fc" id="L80">        grid[row][col] = emptySlot;</span>
+<span class="fc" id="L81">    }</span>
+
+    /**
+     * Ellenőrzi, hogy a megadott játékosnak kialakult-e a 4 hosszú nyertes sorozata.
+     */
+    public boolean checkWin(char piece) {
+        // Vízszintes
+<span class="fc bfc" id="L88" title="All 2 branches covered.">        for (int c = 0; c &lt; cols - 3; c++) {</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">            for (int r = 0; r &lt; rows; r++) {</span>
+<span class="fc bfc" id="L90" title="All 8 branches covered.">                if (grid[r][c] == piece &amp;&amp; grid[r][c+1] == piece &amp;&amp; grid[r][c+2] == piece &amp;&amp; grid[r][c+3] == piece) return true;</span>
+            }
+        }
+        // Függőleges
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        for (int c = 0; c &lt; cols; c++) {</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">            for (int r = 0; r &lt; rows - 3; r++) {</span>
+<span class="fc bfc" id="L96" title="All 8 branches covered.">                if (grid[r][c] == piece &amp;&amp; grid[r+1][c] == piece &amp;&amp; grid[r+2][c] == piece &amp;&amp; grid[r+3][c] == piece) return true;</span>
+            }
+        }
+        // Pozitív hajlásszögű átló
+<span class="fc bfc" id="L100" title="All 2 branches covered.">        for (int c = 0; c &lt; cols - 3; c++) {</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">            for (int r = 0; r &lt; rows - 3; r++) {</span>
+<span class="fc bfc" id="L102" title="All 8 branches covered.">                if (grid[r][c] == piece &amp;&amp; grid[r+1][c+1] == piece &amp;&amp; grid[r+2][c+2] == piece &amp;&amp; grid[r+3][c+3] == piece) return true;</span>
+            }
+        }
+        // Negatív hajlásszögű átló
+<span class="fc bfc" id="L106" title="All 2 branches covered.">        for (int c = 0; c &lt; cols - 3; c++) {</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">            for (int r = 3; r &lt; rows; r++) {</span>
+<span class="fc bfc" id="L108" title="All 8 branches covered.">                if (grid[r][c] == piece &amp;&amp; grid[r-1][c+1] == piece &amp;&amp; grid[r-2][c+2] == piece &amp;&amp; grid[r-3][c+3] == piece) return true;</span>
+            }
+        }
+<span class="fc" id="L111">        return false;</span>
+    }
+
+    /**
+     * Visszaadja, hogy a játék véget ért-e valamilyen formában.
+     */
+    public boolean isTerminalNode(char aiPlayer, char humanPlayer) {
+<span class="fc bfc" id="L118" title="All 6 branches covered.">        return checkWin(aiPlayer) || checkWin(humanPlayer) || getValidLocations().isEmpty();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

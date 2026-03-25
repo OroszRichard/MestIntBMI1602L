@@ -1,0 +1,9 @@
+Connect4GUI$BoardPanel.class
+GameSession.class
+Main.class
+Connect4Board.class
+Connect4GUI.class
+Connect4GUI$1.class
+Connect4AI.class
+DatabaseManager.class
+BoardEvaluator.class

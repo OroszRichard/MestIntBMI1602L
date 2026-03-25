@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Connect4AITest" time="0.266" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="Z:\MESTINT v2.0\target\test-classes;Z:\MESTINT v2.0\target\classes;C:\Users\orosz\.m2\repository\org\xerial\sqlite-jdbc\3.45.1.0\sqlite-jdbc-3.45.1.0.jar;C:\Users\orosz\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\orosz\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;C:\Users\orosz\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\orosz\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\orosz\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\orosz\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\orosz\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\orosz\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\orosz\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value="Europe/Budapest"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="user.country" value="HU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\orosz\.jdks\ms-21.0.10\bin"/>
+    <property name="sun.java.command" value="C:\Users\orosz\AppData\Local\Temp\surefire2307189966428107261\surefirebooter-20260325191943015_3.jar C:\Users\orosz\AppData\Local\Temp\surefire2307189966428107261 2026-03-25T19-19-42_488-jvmRun1 surefire-20260325191943015_1tmp surefire_0-20260325191943015_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="Z:\MESTINT v2.0\target\test-classes;Z:\MESTINT v2.0\target\classes;C:\Users\orosz\.m2\repository\org\xerial\sqlite-jdbc\3.45.1.0\sqlite-jdbc-3.45.1.0.jar;C:\Users\orosz\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\orosz\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;C:\Users\orosz\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\orosz\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\orosz\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\orosz\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\orosz\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\orosz\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\orosz\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\orosz"/>
+    <property name="user.language" value="hu"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Users\orosz\.jdks\ms-21.0.10"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="Z:\MESTINT v2.0"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\orosz\AppData\Local\Temp\surefire2307189966428107261\surefirebooter-20260325191943015_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.10+7-LTS"/>
+    <property name="user.name" value="orosz"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-13106404"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="localRepository" value="C:\Users\orosz\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\orosz\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2025.3.3"/>
+    <property name="java.version" value="21.0.10"/>
+    <property name="user.dir" value="Z:\MESTINT v2.0"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\orosz\.jdks\ms-21.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Tailscale\;C:\Program Files\Git\cmd;C:\Users\orosz\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\bin;C:\Users\orosz\AppData\Local\Programs\Antigravity\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="21.0.10+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="C:\Users\orosz\.m2\repository"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testAITakesWinningMove" classname="Connect4AITest" time="0.125">
+    <system-out><![CDATA[
+=======================================================
+Keresés indítása. Aktuális állapotteret vizsgálunk...
+Maximális mélység (Depth): 4
+Lehetséges lépések száma a gyökéren: 7
+>> Gyökér szint - Megvizsgáljuk: 0. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(6) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(12) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(9) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(7) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(6) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(6) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(6) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(8) >= beta(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(7) >= beta(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(7) >= beta(7). Mögöttes játékfa elhagyása.
+<< 0. oszlop vizsgált értéke (Score): 7
+   [!] Új legjobb oszlop kiválasztva: 0 (Pontszám: 7)
+>> Gyökér szint - Megvizsgáljuk: 1. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(16) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(13) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(11) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(9) <= alpha(9). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(9). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(9). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(9). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(7) <= alpha(8). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(12) >= beta(9). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(9) >= beta(9). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(9) >= beta(9). Mögöttes játékfa elhagyása.
+<< 1. oszlop vizsgált értéke (Score): 9
+   [!] Új legjobb oszlop kiválasztva: 1 (Pontszám: 9)
+>> Gyökér szint - Megvizsgáljuk: 2. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(16) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(13) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(11) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(8). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(8). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(11). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(11). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(11). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(12) >= beta(11). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(12) >= beta(11). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(12) >= beta(11). Mögöttes játékfa elhagyása.
+<< 2. oszlop vizsgált értéke (Score): 11
+   [!] Új legjobb oszlop kiválasztva: 2 (Pontszám: 11)
+>> Gyökér szint - Megvizsgáljuk: 3. oszlopot lépésként.
+<< 3. oszlop vizsgált értéke (Score): 1000000
+   [!] Új legjobb oszlop kiválasztva: 3 (Pontszám: 1000000)
+>> Gyökér szint - Megvizsgáljuk: 4. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(14) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(17) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(14) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(7). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(7). Mögöttes játékfa elhagyása.
+<< 4. oszlop vizsgált értéke (Score): 7
+>> Gyökér szint - Megvizsgáljuk: 5. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(17) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(11) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(11) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(5). Mögöttes játékfa elhagyása.
+<< 5. oszlop vizsgált értéke (Score): 5
+>> Gyökér szint - Megvizsgáljuk: 6. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(14) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(11) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(9) <= alpha(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(1000000) >= beta(5). Mögöttes játékfa elhagyása.
+<< 6. oszlop vizsgált értéke (Score): 5
+A keresés befejeződött! A legoptimálisabb döntés: 3. oszlop
+=======================================================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAIPrefersCenterCol" classname="Connect4AITest" time="0.049">
+    <system-out><![CDATA[
+=======================================================
+Keresés indítása. Aktuális állapotteret vizsgálunk...
+Maximális mélység (Depth): 4
+Lehetséges lépések száma a gyökéren: 7
+>> Gyökér szint - Megvizsgáljuk: 0. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(2). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+<< 0. oszlop vizsgált értéke (Score): 3
+   [!] Új legjobb oszlop kiválasztva: 0 (Pontszám: 3)
+>> Gyökér szint - Megvizsgáljuk: 1. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+<< 1. oszlop vizsgált értéke (Score): 3
+>> Gyökér szint - Megvizsgáljuk: 2. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(3). Mögöttes játékfa elhagyása.
+<< 2. oszlop vizsgált értéke (Score): 3
+>> Gyökér szint - Megvizsgáljuk: 3. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(5) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(5) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(5) <= alpha(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(6) >= beta(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(6) >= beta(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(6) >= beta(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(6) >= beta(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(6) >= beta(6). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(3) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(6) >= beta(6). Mögöttes játékfa elhagyása.
+<< 3. oszlop vizsgált értéke (Score): 6
+   [!] Új legjobb oszlop kiválasztva: 3 (Pontszám: 6)
+>> Gyökér szint - Megvizsgáljuk: 4. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(4) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+<< 4. oszlop vizsgált értéke (Score): 3
+>> Gyökér szint - Megvizsgáljuk: 5. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+<< 5. oszlop vizsgált értéke (Score): 3
+>> Gyökér szint - Megvizsgáljuk: 6. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(2) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(3). Mögöttes játékfa elhagyása.
+<< 6. oszlop vizsgált értéke (Score): 3
+A keresés befejeződött! A legoptimálisabb döntés: 3. oszlop
+=======================================================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAIBlocksOpponentWin" classname="Connect4AITest" time="0.023">
+    <system-out><![CDATA[
+=======================================================
+Keresés indítása. Aktuális állapotteret vizsgálunk...
+Maximális mélység (Depth): 4
+Lehetséges lépések száma a gyökéren: 7
+>> Gyökér szint - Megvizsgáljuk: 0. oszlopot lépésként.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(-4) <= alpha(-4). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(5). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(-2) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(3). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(-1) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] Játékos (Minimizing) ágon: beta(0) <= alpha(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(0). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(0). Mögöttes játékfa elhagyása.
+<< 0. oszlop vizsgált értéke (Score): 0
+   [!] Új legjobb oszlop kiválasztva: 0 (Pontszám: 0)
+>> Gyökér szint - Megvizsgáljuk: 1. oszlopot lépésként.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+<< 1. oszlop vizsgált értéke (Score): -1000000
+>> Gyökér szint - Megvizsgáljuk: 2. oszlopot lépésként.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+<< 2. oszlop vizsgált értéke (Score): -1000000
+>> Gyökér szint - Megvizsgáljuk: 3. oszlopot lépésként.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(3) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(5) >= beta(-1000000). Mögöttes játékfa elhagyása.
+<< 3. oszlop vizsgált értéke (Score): -1000000
+>> Gyökér szint - Megvizsgáljuk: 4. oszlopot lépésként.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+<< 4. oszlop vizsgált értéke (Score): -1000000
+>> Gyökér szint - Megvizsgáljuk: 5. oszlopot lépésként.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+<< 5. oszlop vizsgált értéke (Score): -1000000
+>> Gyökér szint - Megvizsgáljuk: 6. oszlopot lépésként.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(-4) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+    [Alpha-Beta Nyesés] AI (Maximizing) ágon: alpha(0) >= beta(-1000000). Mögöttes játékfa elhagyása.
+<< 6. oszlop vizsgált értéke (Score): -1000000
+A keresés befejeződött! A legoptimálisabb döntés: 0. oszlop
+=======================================================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testMinimaxDrawConditionAndFallback" classname="Connect4AITest" time="0.007">
+    <system-out><![CDATA[
+=======================================================
+Keresés indítása. Aktuális állapotteret vizsgálunk...
+Maximális mélység (Depth): 4
+Lehetséges lépések száma a gyökéren: 1
+>> Gyökér szint - Megvizsgáljuk: 0. oszlopot lépésként.
+<< 0. oszlop vizsgált értéke (Score): 1000000
+   [!] Új legjobb oszlop kiválasztva: 0 (Pontszám: 1000000)
+A keresés befejeződött! A legoptimálisabb döntés: 0. oszlop
+=======================================================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testFullBoardReturnsInvalid" classname="Connect4AITest" time="0.004"/>
+</testsuite>
